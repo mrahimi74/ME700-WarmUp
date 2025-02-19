@@ -25,7 +25,7 @@ def test_check():
   assert BM.check(x,y) == True
   x = 5
   y = 3
-  with pytest.raises(ValueError, match = f"Invalid input: {x} is greater than {y}."):
+  with pytest.raises(ValueError, match = "a must be smaller than b"):
     BM.check(x,y)
   
 
@@ -35,9 +35,9 @@ def test_opps_sign():
   x = 3
   y = 5
   assert BM.opps_sign(x, y, f) == True
-  x = 5
+  x = 2
   y = 3
-  with pytest.raises(ValueError, match = "f(a) and f(b) must have opposite signs"):
+  with pytest.raises(ValueError, match = "function should have opposite signs"):
     BM.opps_sign(x,y)
 
 

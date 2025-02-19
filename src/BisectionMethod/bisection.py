@@ -15,7 +15,7 @@ def abs(x):
 
 def check(a: float, b: float):
     if a >= b:
-        raise ValueError(f"Invalid input: {a} is greater than {b}.")
+        raise ValueError("a must be smaller than b")
     return True
 
 
@@ -23,7 +23,7 @@ def opps_sign(a, b, func):
     if func(b) * func(a) < 0:
         return True
     else:
-        raise ValueError("f(a) and f(b) must have opposite signs")
+        raise ValueError("function should have opposite signs")
 
 def bisection(a, b, max_iter, tol, func):
     iter = 1
