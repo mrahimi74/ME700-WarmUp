@@ -8,7 +8,7 @@ version = "0.0.0"
 authors = [
   { name="Mohamad Rahimi", email="mrahimi@bu.edu" },
 ]
-description = "BisectionMethod workflow"
+description = "Bisectionmethod workflow"
 readme = "README.md"
 license = { file="LICENSE" }
 requires-python = ">=3.9"
