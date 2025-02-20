@@ -1,3 +1,5 @@
+import numpy as np
+
 def Avg(x, y):
     return (x + y) / 2
 
