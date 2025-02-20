@@ -44,4 +44,4 @@ def bisection(a, b, max_iter, tol, func):
                 raise ValueError("Solution did not converge as the maximum iteration reached")
                 break
         else:
-            return c, c_history, iter
+            return c, np.array(c_history), iter
