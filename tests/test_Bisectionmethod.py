@@ -29,7 +29,9 @@ def test_check():
     BM.check(x,y)
   
 
-f = lambda x: x**2 - 12
+
+def f(x):
+  return x**2 -12
 
 def test_opps_sign():
   x = 3
@@ -40,8 +42,9 @@ def test_opps_sign():
   with pytest.raises(ValueError, match = "function should have opposite signs"):
     BM.opps_sign(x,y,f)
 
+def g(x):
+  return x**3 +5
 
-g = lambda x: x ** 3 + 5
 def test_bisection():
   p,q,r = BM.bisection(-3, 1, 200, 1e-11, g)
   assert np.isclose(p, -1.7099759466764226)
