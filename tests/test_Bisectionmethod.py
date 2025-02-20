@@ -45,5 +45,5 @@ g = lambda x: x ** 3 + 5
 def test_bisection():
   p,q,r = BM.bisection(-3, 1, 200, 1e-11, g)
   assert np.isclose(p, -1.7099759466764226)
-  with pytest.raises("Solution did not converge as the maximum iteration reached"):
+  with pytest.raises(ValueError, match = "Solution did not converge as the maximum iteration reached"):
     p,q,r = BM.bisection(-3, 1, 2, 1e-11, g)
