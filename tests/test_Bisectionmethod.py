@@ -38,7 +38,7 @@ def test_opps_sign():
   x = 2
   y = 3
   with pytest.raises(ValueError, match = "function should have opposite signs"):
-    BM.opps_sign(x,y)
+    BM.opps_sign(x,y,f)
 
 
 g = lambda x: x ** 3 + 5
